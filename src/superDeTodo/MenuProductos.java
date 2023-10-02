@@ -85,6 +85,11 @@ private DefaultTableModel modelo = new DefaultTableModel();
         jLabel7.setText("Stock");
 
         jComboBoxRubro.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Comestibles", "Limpieza", "Perfumeeria" }));
+        jComboBoxRubro.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jComboBoxRubroActionPerformed(evt);
+            }
+        });
 
         jButtonNuevo.setText("Nuevo");
         jButtonNuevo.addActionListener(new java.awt.event.ActionListener() {
@@ -127,6 +132,15 @@ private DefaultTableModel modelo = new DefaultTableModel();
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        jtProductos.addAncestorListener(new javax.swing.event.AncestorListener() {
+            public void ancestorMoved(javax.swing.event.AncestorEvent evt) {
+            }
+            public void ancestorAdded(javax.swing.event.AncestorEvent evt) {
+                jtProductosAncestorAdded(evt);
+            }
+            public void ancestorRemoved(javax.swing.event.AncestorEvent evt) {
+            }
+        });
         jtProductos.addMouseListener(new java.awt.event.MouseAdapter() {
             public void mouseClicked(java.awt.event.MouseEvent evt) {
                 jtProductosMouseClicked(evt);
@@ -278,6 +292,14 @@ private DefaultTableModel modelo = new DefaultTableModel();
 //          System.out.println(codigo);
           
     }//GEN-LAST:event_jtProductosMouseClicked
+
+    private void jComboBoxRubroActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxRubroActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jComboBoxRubroActionPerformed
+
+    private void jtProductosAncestorAdded(javax.swing.event.AncestorEvent evt) {//GEN-FIRST:event_jtProductosAncestorAdded
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jtProductosAncestorAdded
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
